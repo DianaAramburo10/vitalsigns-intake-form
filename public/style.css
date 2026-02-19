@@ -198,6 +198,14 @@ body {
   button[type="submit"]:active {
     transform: translateY(1px);
   }
+
+  #form-message {
+    margin-top: 1rem;
+    font-weight: 600;
+    text-align: center;
+    min-height: 24px;
+    transition: opacity 0.3s ease;
+  }
   
   
   

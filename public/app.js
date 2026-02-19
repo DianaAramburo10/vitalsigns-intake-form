@@ -28,9 +28,18 @@ form.addEventListener('submit', async (event) => {
     const result = await response.json();
     alert(result.message);
 
-    if (response.ok) form.reset();
+    if (response.ok) {
+        message.textContent = result.message || "Registration successful!";
+        message.style.color = "green";
+      
+        setTimeout(() => {
+          form.reset();
+        }, 1500);
+      }
   } catch (err) {
     console.error(err);
     alert("Server error. Try again.");
   }
+
+
 });

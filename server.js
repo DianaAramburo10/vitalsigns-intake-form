@@ -5,8 +5,8 @@ const app = express();
 
 
 app.use(cors());
-app.use(express.json()); // <-- so req.body works with JSON
-app.use(express.static('public')); // <-- serves /public/index.html automatically
+app.use(express.json()); 
+app.use(express.static('public'));
 
 
 app.post('/api/register-patient', (req, res) => {
