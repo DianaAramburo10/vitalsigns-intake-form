@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Trirong');
+:root {
+    --primary: rgb(28, 116, 140);
+    --primary-dark: rgb(36, 103, 227);
+    --dark: rgb(13, 13, 48);
+    --muted: rgb(128, 146, 161);
+    --light: rgb(234, 241, 248);
+    --card: white;
+    --border: rgb(132, 162, 168);
+    --danger: red;
+    --success: green;
+    --radius: 12px;
+    --shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  }
+  
+  * { box-sizing: border-box; }
+  
+body {
+    font-family: 'Trirong', sans-serif;
+    margin: 0;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.5;
+  }
+  
+  /* Header */
+  header {
+    background: rgb(58, 157, 157);
+    color: white;
+    padding: 3rem;
+    text-align: center; 
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 3rem;
+    letter-spacing: 0.2px;
+  }
+  
+
+  main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  /* Form Card */
+  form {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  
+  /* Fieldsets */
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 1.5rem;
+  }
+  
+  fieldset > legend {
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  
+  fieldset.form-group {
+    border-top: 1px solid var(--border);
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+  }
+  
+  fieldset.form-group legend {
+    font-size: 1rem;
+    color: var(--dark);
+  }
+  
+  /* Form groups */
+  .form-group,
+  .password-group {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    color: var(--dark);
+  }
+  
+  /* Inputs */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="date"],
+  input[type="number"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: white;
+    color: var(--dark);
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 110px;
+  }
+  
+  input::placeholder,
+  textarea::placeholder {
+    color: rgb(137, 154, 191);
+  }
+  
+  /* Focus states important for accessibility */
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: rgba(37, 99, 235, 0.65);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+  }
+  
+
+  input:required:invalid,
+  select:required:invalid {
+    border-color: rgba(239, 68, 68, 0.55);
+  }
+  
+
+  fieldset.form-group input[type="radio"] {
+    width: auto;
+    margin-right: 0.4rem;
+    transform: translateY(1px);
+  }
+  
+  fieldset.form-group label {
+    display: inline-block;
+    font-weight: 500;
+    margin: 0.25rem 0.75rem 0.25rem 0;
+    color: var(--muted);
+  }
+  
+  /* Blood type select */
+  select {
+    appearance: none;
+    background-image:
+      linear-gradient(45deg, transparent 50%, rgb(91, 105, 120) 50%),
+      linear-gradient(135deg, rgb(91, 105, 120) 50%, transparent 50%),
+      linear-gradient(to right, transparent, transparent);
+    background-position:
+      calc(100% - 18px) calc(50% - 3px),
+      calc(100% - 12px) calc(50% - 3px),
+      0 0;
+    background-size:
+      6px 6px,
+      6px 6px,
+      100% 100%;
+    background-repeat: no-repeat;
+  }
+  
+  /* Consent checkbox row */
+  .form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+    transform: translateY(1px);
+  }
+  
+  .form-group #consent + label {
+    display: inline;
+    font-weight: 600;
+    color: var(--dark);
+  }
+  
+  /* Submit button */
+  button[type="submit"] {
+    width: 100%;
+    padding: 0.95rem 1rem;
+    border: none;
+    border-radius: 12px;
+    background: var(--primary);
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background: var(--primary-dark);
+  }
+  
+  button[type="submit"]:active {
+    transform: translateY(1px);
+  }
+  
+  
+  
+  @media (max-width: 560px) {
+    header { padding: 1rem; }
+    header h1 { font-size: 1.2rem; }
+    fieldset { padding: 1rem; }
+  }
+  

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"> 
+        <title>"VitalSigns" Patient Registration System</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Patient Data Registration</h1>  
+        </header>
+
+        <main>
+            <form id="contactForm">
+
+                <fieldset>
+                    <legend>Please introduce the following information</legend>
+
+                    <div class="form-group">
+                        <label for="user-name">Full Name:</label>
+                        <input type="text" id="user-name" name="patient_name" placeholder="Your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="user-email">Email:</label>
+                        <input type="email" id="user-email" name="patient_email" placeholder="patient@gmail.com" required>
+                    </div>
+                    
+                    <div class="password-group">
+                        <label for="user-password">Password:</label>
+                        <input type="password" id="user-password" name="patient_password" placeholder="Your password" minlength="8" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="patient_dob" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="height">Height (cm):</label>
+                        <input type="number" id="height" name="patient_height" min="30" max="250">
+                    </div>
+
+                    <fieldset class="form-group">
+                        <legend>Gender:</legend>
+                            <input type="radio" id="gender-male" name="patient_gender" value="male">
+                            <label for="gender-male">Male</label><br>
+  
+                            <input type="radio" id="gender-female" name="patient_gender" value="female">
+                            <label for="gender-female">Female</label><br>
+  
+                            <input type="radio" id="gender-other" name="patient_gender" value="other">
+                            <label for="gender-other">Other</label>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="blood-type">Blood Type:</label>
+                        <select id="blood-type" name="patient_blood_type">
+                          <option value="">Select blood type</option>
+                          <option value="A+">A+</option>
+                          <option value="A-">A-</option>
+                          <option value="B+">B+</option>
+                          <option value="B-">B-</option>
+                          <option value="AB+">AB+</option>
+                          <option value="AB-">AB-</option>
+                          <option value="O+">O+</option>
+                          <option value="O-">O-</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="medical-history">Medical History:</label>
+                        <textarea id="medical-history" name="patient_medical_history" placeholder="e.g., allergies" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="checkbox" id="consent" name="patient_consent" required>
+                        <label for="consent">I accept the terms and conditions</label>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit">Register</button>
+                    </div>
+
+                </fieldset>
+            
+            </form>
+        </main>
+        <script src="script.js"></script>
+            
+    </body>
+</html>
+ 
